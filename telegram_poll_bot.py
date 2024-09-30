@@ -15,7 +15,7 @@ TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 GROUP_CHAT_ID = os.getenv('GROUP_CHAT_ID')
 
 def send_poll(context: CallbackContext):
-    question = "Quando se vedemo stronzi?"
+    question = "Quando ci vediamo?"
     options = ["Lunedi (21:00-23:00)","Martedi (21:00-23:00)","Mercoledi (21:00-23:00)", "Giovedi (21:00-23:00)","Venerdi (21:00-23:00)", "Sabato (09:00-12:00)", "Domenica (09:00-12:00)", "Extra We Afternoon/Evening"]
     context.bot.send_poll(chat_id=GROUP_CHAT_ID, question=question, options=options, is_anonymous=False, allows_multiple_answers=True)
 
